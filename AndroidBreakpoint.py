@@ -203,10 +203,6 @@ class myIdaPlugin(idaapi.plugin_t):
     help = "Something helpful"
 
     def init(self):
-        # msg("Ida plugin init called.\n")
-        # self.context_menu = idaapi.add_menu_item("Options/", "Un/highlight call instructions", "", 0, self.run, (None,))
-        # self.dbg_hook=DBG_Hook()
-        # self.dbg_hook.hook()
         print("init func")
         try:
             # result=idaapi.register_and_attach_to_menu("Options/path","name","label","",0,self.run(0),None)
@@ -217,47 +213,20 @@ class myIdaPlugin(idaapi.plugin_t):
         except BaseException, e:
             print(e)
 
-        # idainfo=idaapi.get_inf_structure()
-        # if idainfo.filetype!=idaapi.f_ELF:
-        #     print("idb isn't elf,skip")
-        #     return idaapi.PLUGIN_SKIP
-        # pass
+        idainfo=idaapi.get_inf_structure()
+        if idainfo.filetype!=idaapi.f_ELF:
+            print("idb isn't elf,skip")
+            return idaapi.PLUGIN_SKIP
         return idaapi.PLUGIN_KEEP
 
     def term(self):
-        # self.dbg_hook.unhook()
         pass
-        # idaapi.msg("Ida plugin term called.\n")
-        # idaapi.msg("unhooked")
 
     def run(self, arg):
-        # pass
         try:
-            # if not idaapi.is_debugger_on():
-            #     print("Please debug the app first")
-            #     return
             print("AndroidBreakpoint run")
-            # module_base = idc.GetFirstModule()
-            # while module_base != None:
-            #     module_name = idc.GetModuleName(module_base)
-            #     print(module_name)
-            #
-            #     module_base = idc.GetNextModule(module_base)
-            # segs=idautils.Segments()
-            # idautils.FuncItems()
-            # for section in segs:
-            #     print(idc.SegName(section))
         except BaseException, e:
             print e
-
-
-        # msg("(%d)" % is_debugger_busy())
-        # msg("Ida plugin run(%d) called.\n" % arg)
-        # set_remote_debugger("localhost", None, 23946)
-        # msg("Done,set remote debugger\n")
-        # result = attach_process()
-        # msg("Done,attach debugger,attach result:(%d)\n" % result)
-
 
 def PLUGIN_ENTRY():
 
