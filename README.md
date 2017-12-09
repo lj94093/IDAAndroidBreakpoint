@@ -6,7 +6,9 @@ IDA plugin aid to set android so breakpoint
 # Usage
 Click the Edit->AndroidBreakpoint->bpInit to set breakpoint on init function
 Click the Edit->AndroidBreakpoint->bpInitArray to set breakpoint on InitArray function
+
 ![](pic/1.png)
+
 # Tips
 - The plugin will find the init or initArray by the input file ELF program header while your debugger is not on.
 - If your debugger is on,the plugin will set the breakpoint on the linker module where the init or initarray function is called.
