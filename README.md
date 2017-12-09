@@ -13,3 +13,4 @@ Click the Edit->AndroidBreakpoint->bpInitArray to set breakpoint on InitArray fu
 # Tips
 - The plugin will find the init or initArray by the input file ELF program header while your debugger is not on.
 - If your debugger is on,the plugin will set the breakpoint on the linker module where the init or initarray function is called.
+- The linker's bytecode may be different due to the Android version,so if you can't find the bytecode in debug mode,please get the bytecode from your device,then replace the bytecode in AndroidBreakpoint.py .
