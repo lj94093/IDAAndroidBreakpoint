@@ -1,11 +1,5 @@
-import subprocess
-
 import idaapi
-import idautils
-# from os.path import dirname
-# print(dirname(__file__))
 import idc
-import os
 import struct
 
 def get_ushort(file,offset):
