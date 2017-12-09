@@ -1,7 +1,7 @@
 # IDAAndroidBreakpoint
 IDA plugin aid to set android so breakpoint
 # Install
-1. Be sure your IDA pro has installed the IDAPython plugin
+1. Be sure your IDA Pro has installed the IDAPython plugin
 2. Put AndroidBreakpoint.py into plugins folder under your IDA Pro installation path.
 # Usage
 Click the Edit->AndroidBreakpoint->bpInit to set breakpoint on init function
